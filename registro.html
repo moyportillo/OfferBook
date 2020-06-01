@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Registro | OfferBook</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ol.css" type="text/css">
+    <style>
+        select,
+        textarea,
+        input {
+            padding: 5px;
+            width: 100%;
+            border-radius: 5px;
+            font-family: cursive;
+        }
+        
+        select:hover,
+        textarea:hover,
+        input:hover {
+            border-color: rgb(0, 102, 255);
+        }
+        
+        div {
+            margin-top: 15px;
+        }
+        
+        h1,
+        h3 {
+            margin: 25px;
+            font-family: cursive;
+        }
+    </style>
+</head>
+
+<body class="fondo">
+    <header>
+        <div class="container-fluid">
+            <nav class="col-md-4 header-bar">
+                <a class="titulo" href="index.html" style="text-decoration:none">
+                    <h1 class="titulo">OfferBook</h1>
+                </a>
+            </nav>
+        </div>
+    </header>
+    <form id="registro">
+        <div id="div-registro" class="container">
+            <div class="row border" style="margin: 100px; padding: 200px;">
+                <div class="col text-right">
+                    <input type="button" onclick="formularioRegistro('empresa')" value="Registro para empresas">
+                </div>
+                <div class="col text-left">
+                    <input type="button" onclick="formularioRegistro('usuario')" value="Registro para usuarios">
+                </div>
+            </div>
+        </div>
+    </form>
+    <footer>
+        <div class="container-fluid footer-back">
+            <h2 class="footer-part">OfferBook</h2>
+            <h2 class="footer-part2">"Donde Encuentras tu descuento ideal"</h2>
+            <div class="col-md-12 footer-img">
+                <img src="image/facebook.png">
+                <img src="image/youtube.png">
+                <img src="image/instagram.png">
+                <img src="image/twitter.png">
+            </div>
+            <h6 class="footer-derecho">Derechos Reservados 2020</h6>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/controlador.js"></script>
+    <script src="js/ol.js" type="text/javascript"></script>
+</body>
+
+</html>
+<script>
+    function formularioRegistro(id) {
+        //REGISTRO EMPRESAS
+        if (id == 'empresa') {
+            document.getElementById("registro").innerHTML = '<div class="container col-12 col-sm-11 col-md-8 col-lg-8 col-xl-8" style="background-color: rgba(17, 85, 82, 0.5);">' +
+                '<h1>REGISTRO PARA EMPRESAS</h1>' +
+                '<h3>Datos Generales</h3>' +
+                '<div class="row">' +
+                '<div class="col" style="margin-right: 0px; margin-left: 25px;">' +
+                '<input type="text" id="nombre-empresa" placeholder="Nombre de su Empresa">' +
+                '</div>' +
+                '<div class="col" style="margin-left: -25px; margin-right: 30px;">' +
+                '<input type="text" id="nombreu-empresa" placeholder="Ingrese su nombre de usuario">' +
+                '</div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col" style="margin-left: 25px; margin-right: 30px;">' +
+                '<textarea id="descripcion-empresa" cols="60" rows="5" placeholder="Describa su empresa"></textarea>' +
+                '</div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col" style="margin-left: 25px; margin-right: 30px;">' +
+                '<input type="email" id="correo-empresa" placeholder="Ingrese su correo">' +
+                '</div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col" style="margin-right: 0px; margin-left: 25px;">' +
+                '<input type="password" id="contraseña-empresa" placeholder="Ingrese contraseña">' +
+                '</div>' +
+                '<div class="col" style="margin-left: -25px; margin-right: 30px;">' +
+                '<input type="password" id="vcontraseña-empresa" placeholder="Repita su contraseña">' +
+                '</div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col" style="margin-right: 0px; margin-left: 25px;">' +
+                '<div class="input-group">' +
+                '<div class="custom-file">' +
+                '<input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon04">' +
+                '<label class="custom-file-label" for="inputGroupFile01">Subir Logo</label>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '<div class="col" style="margin-left: -25px; margin-right: 30px;">' +
+                '<div class="input-group">' +
+                '<div class="custom-file">' +
+                '<input type="file" class="custom-file-input" id="inputGroupFile02" aria-describedby="inputGroupFileAddon04">' +
+                '<label class="custom-file-label" for="inputGroupFile02">Subir Banner</label>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col input-group" style="margin-left: 25px; margin-right: 30px;">' +
+                '<input style="width: 5%; border-right: none;" type="button" onclick="" value="...">' +
+                '<input type="text" style="width: 95%; border-left: none;" id="ubicacion-empresa" placeholder="Añadir ubicación de sus sucursal principal">' +
+                '</div>' +
+                '</div>' +
+                '<div id="map" class="col"></div>' +
+                '<h3>Redes Sociales</h3>' +
+                '<div class="row">' +
+                '<div class="col" style="margin-right: 0px; margin-left: 25px;">' +
+                '<img src="image/redes-sociales.png" alt="Pagina Principal">' +
+                '<input style="width: 80%;" type="text" id="sitio-web" placeholder="Sitio Web Propio">' +
+                '</div>' +
+                '<div class="col" style="margin-left: -25px; margin-right: 30px;">' +
+                '<img src="image/facebook.png" alt="Facebook">' +
+                '<input style="width: 80%;" type="text" id="facebook" placeholder="Facebook">' +
+                '</div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col" style="margin-right: 0px; margin-left: 25px;">' +
+                '<img src="image/instagram.png" alt="Instagram">' +
+                '<input style="width: 80%;" type="text" id="instagram" placeholder="Instagram">' +
+                '</div>' +
+                '<div class="col" style="margin-left: -25px; margin-right: 30px;">' +
+                '<img src="image/marcas-y-logotipos.png" alt="Whatsapp">' +
+                '<input style="width: 80%;" type="text" id="whatsapp" placeholder="Whatsapp">' +
+                '</div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col" style="margin-right: 0px; margin-left: 25px;">' +
+                '<img src="image/twitter.png" alt="Twitter">' +
+                '<input style="width: 80%;" type="text" id="twitter" placeholder="Twitter">' +
+                '</div>' +
+                '<div class="col" style="margin-left: -25px; margin-right: 30px;">' +
+                '<img src="image/negocio.png" alt="Otro">' +
+                '<input style="width: 80%;" type="text" id="otro" placeholder="Otro">' +
+                '</div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col text-right" style="padding: 20px;">' +
+                '<input type="button" value="Cancel" style="width: 100px;">' +
+                '<input type="submit" value="Submit" style="width: 100px;">' +
+                '</div>' +
+                '</div>' +
+                '</div>'
+            crearMapa();
+        } else if (id == 'usuario') {
+            //REGISTRO USUARIOS
+            document.getElementById("registro").innerHTML = '<div class="container col-12 col-sm-11 col-md-8 col-lg-8 col-xl-8" style="background-color: rgba(17, 85, 82, 0.5);">' +
+                '<h1>REGISTRO PARA USUARIOS</h1>' +
+                '<h3>Datos Generales</h3>' +
+                '<div class="row">' +
+                '<div class="col" style="margin-right: 0px; margin-left: 25px;">' +
+                '<input type="text" id="nombre-usuario" placeholder="Primer Nombre">' +
+                '</div>' +
+                '<div class="col" style="margin-left: -25px; margin-right: 30px;">' +
+                '<input type="text" id="apellido-usuario" placeholder="Primer Apellido">' +
+                '</div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col" style="margin-right: 0px; margin-left: 25px;">' +
+                '<input type="text" id="nombreu-usuario" placeholder="Ingrese su nombre de usuario">' +
+                '</div>' +
+                '<div class="col" style="margin-left: -25px; margin-right: 30px;">' +
+                '<select name="genero" id="genero-usuario">' +
+                '<option value="null">-----Género-----</option>' +
+                '<option value="fem">Femenino</option>' +
+                '<option value="mas">Masculino</option>' +
+                '<option value="otro">Otro</option>' +
+                '</select>' +
+                '</div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col" style="margin-right: 0px; margin-left: 25px;">' +
+                '<input type="password" id="contraseña-empresa" placeholder="Ingrese contraseña">' +
+                '</div>' +
+                '<div class="col" style="margin-left: -25px; margin-right: 30px;">' +
+                '<input type="password" id="vcontraseña-empresa" placeholder="Repita su contraseña">' +
+                '</div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col" style="margin-right: 0px; margin-left: 25px;">' +
+                '<div class="input-group">' +
+                '<div class="custom-file">' +
+                '<input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon04">' +
+                '<label class="custom-file-label" for="inputGroupFile01">Subir Foto de Perfil</label>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '<div class="col" style="margin-left: -25px; margin-right: 30px; margin-top: 45px;">' +
+                '<input type="text" id="codigoPostal-usuario" placeholder="Código Postal">' +
+                '</div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col input-group" style="margin-left: 25px; margin-right: 30px;">' +
+                '<input style="width: 5%; border-right: none;" type="button" onclick="" value="...">' +
+                '<input type="text" style="width: 95%; border-left: none;" id="ubicacion-usuario" placeholder="Añadir su ubicación">' +
+                '</div>' +
+                '</div>' +
+                '<div id="map" class="col"></div>' +
+                '<h3>Contactos</h3>' +
+                '<div class="row">' +
+                '<div class="col" style="margin-right: 0px; margin-left: 25px;">' +
+                '<img src="image/llamar.png" alt="Instagram">' +
+                '<input style="width: 80%;" type="text" id="Teléfono" placeholder="Teléfono">' +
+                '</div>' +
+                '<div class="col" style="margin-left: -25px; margin-right: 30px;">' +
+                '<img src="image/telefono-inteligente.png" alt="Whatsapp">' +
+                '<input style="width: 80%;" type="text" id="Celular" placeholder="Celular">' +
+                '</div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col text-right" style="padding: 20px;">' +
+                '<input type="button" onclick="formularioRegistro()" value="Cancel" style="width: 100px;">' +
+                '<input type="submit" onclick="" value="Submit" style="width: 100px;">' +
+                '</div>' +
+                '</div>' +
+                '</div>'
+            crearMapa();
+        }
+    }
+</script>

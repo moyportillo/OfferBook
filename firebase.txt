@@ -1,0 +1,23 @@
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBWbtTeO32fcmG48BM53DFmXocNkfYO35M",
+    authDomain: "offerbook-a4d65.firebaseapp.com",
+    databaseURL: "https://offerbook-a4d65.firebaseio.com",
+    projectId: "offerbook-a4d65",
+    storageBucket: "offerbook-a4d65.appspot.com",
+    messagingSenderId: "79302505379",
+    appId: "1:79302505379:web:6b4456e771bfffbdf02016",
+    measurementId: "G-KL2PNHJXZ0"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
